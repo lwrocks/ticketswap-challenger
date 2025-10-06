@@ -1,6 +1,7 @@
 import { Book, ListTodo } from "lucide-react";
 import { Logo } from "./components/Logo";
 import { PopularEvents } from "./components/PopularEvents";
+import { SearchEvents } from "./components/SearchEvents";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       </div>
 
       <PopularEvents />
+      <SearchEvents />
     </main>
   );
 }
