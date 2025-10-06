@@ -1,4 +1,4 @@
-const locations = [
+export const locations = [
   {
     id: 1,
     name: "Biddinghuizen",
@@ -161,5 +161,5 @@ const events = [
 ];
 
 export async function getEvents() {
-  return events
+  return events;
 }
