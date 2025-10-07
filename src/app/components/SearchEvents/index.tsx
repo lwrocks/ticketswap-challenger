@@ -42,29 +42,37 @@ export function SearchEvents({
   };
 
   return (
-    <form className="flex gap-2 mb-4" onSubmit={handleSearch}>
-      <input
-        type="text"
-        placeholder="Search Events"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="border rounded px-2 py-1"
-      />
-      <select
-        value={locationId}
-        onChange={(e) => setLocationId(e.target.value)}
-        className="border rounded px-2 py-1"
+    <div className="mt-5">
+      <form
+        className="flex flex-col gap-2 mb-4 sm:flex-row"
+        onSubmit={handleSearch}
       >
-        <option value="">All Locations</option>
-        {locations.map((loc: any) => (
-          <option key={loc.id} value={loc.id}>
-            {loc.name}
-          </option>
-        ))}
-      </select>
-      <button type="submit" className="bg-primary text-white px-3 py-1 rounded">
-        Search
-      </button>
-    </form>
+        <input
+          type="text"
+          placeholder="Search Events"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="border rounded px-2 py-1 w-full sm:w-auto"
+        />
+        <select
+          value={locationId}
+          onChange={(e) => setLocationId(e.target.value)}
+          className="border rounded px-2 py-1 w-full sm:w-auto text-base"
+        >
+          <option value="">All Locations</option>
+          {locations.map((loc: any) => (
+            <option key={loc.id} value={loc.id}>
+              {loc.name}
+            </option>
+          ))}
+        </select>
+        <button
+          type="submit"
+          className="bg-primary text-white px-3 py-1 rounded w-full sm:w-auto"
+        >
+          Search
+        </button>
+      </form>
+    </div>
   );
 }
