@@ -45,7 +45,7 @@ export function SearchEvents({
     <form className="flex gap-2 mb-4" onSubmit={handleSearch}>
       <input
         type="text"
-        placeholder="Search events..."
+        placeholder="Search Events"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="border rounded px-2 py-1"
@@ -63,7 +63,7 @@ export function SearchEvents({
         ))}
       </select>
       <button type="submit" className="bg-primary text-white px-3 py-1 rounded">
-        {loading ? "Searching..." : "Search"}
+        Search
       </button>
     </form>
   );
